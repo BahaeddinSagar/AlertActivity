@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AlertActivity</string>
+    <string name="Alert">Press for alerts</string>
+    <string name="positiveButtonText">OK</string>
+
+</resources>
