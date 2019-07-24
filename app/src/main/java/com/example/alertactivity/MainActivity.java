@@ -105,15 +105,15 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Enter your name: ");
         // create EDITTEXT programatilcally
-        
-        //final EditText editText = new EditText(this);
-        //editText.setHint("your name");
+
+        final EditText editText = new EditText(this);
+        editText.setHint("your name");
         // call set view from builder
-        //builder.setView(editText);
+        builder.setView(editText);
 
 
         builder.setMessage("Your name please");
-        builder.setView(R.layout.dialog_layout);
+
         builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -124,10 +124,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
         builder.create().show();
+    }
 
+    public void AlertWithCustomView(View view){
 
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Enter your name: ");
+        // Refrence view from layoutfile
+        builder.setView(R.layout.dialog_layout);
 
-
+        builder.setPositiveButton("OK",null);
+        //show alert
+        builder.create().show();
 
     }
 
